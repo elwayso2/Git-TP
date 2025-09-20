@@ -14,7 +14,7 @@ nombre_maximum: int
 nombre_minimum: int
 essai_actuel: int = 1
 essai_Maximum: int
-nombre_random = random.randint(1, 10)
+nombre_random = random.randint(1, 20)
 i: int
 
 print(text_normal + "Choisir une des options suivantes (entrez un nombre entre 1 et 4): ")
@@ -33,20 +33,21 @@ match mode_Choisi:
         nombre_minimum = 0
         nombre_maximum = 20
         for essai_actuel in range(1 , 11 , +1):
+            print(f"{essai_actuel} / {essai_Maximum} {nombre_minimum} < ? < {nombre_maximum} :")
             nombre_guess = int(input(""))
             if nombre_guess == nombre_random:
                 print("vous avez gagné")
             elif nombre_guess <= nombre_random:
-                nombre_guess = nombre_minimum
-            else:
-
-        
-            print(f"{essai_actuel} / {essai_Maximum} {nombre_minimum} < ? < {nombre_maximum} :")
-    case 2:
+                nombre_guess = nombre_minimum + 0
+            elif nombre_guess >= nombre_random:
+                nombre_guess = nombre_maximum + 0
+            elif essai_actuel == essai_Maximum:
+                print(f"vous avec perdu le nombre était {nombre_random}")
+    # case 2:
     
-    case 3:
+    # case 3:
     
-    case 4:
+    # case 4:
     
     case _:
         print("erreur")
