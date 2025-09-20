@@ -30,24 +30,24 @@ mode_Choisi = int(input(""))
 match mode_Choisi:
     case 1:
         essai_Maximum = 10
-        nombre_minimum = 0
-        nombre_maximum = 20
-        for essai_actuel in range(1 , 11 , +1):
-            print(f"{essai_actuel} / {essai_Maximum} {nombre_minimum} < ? < {nombre_maximum} :")
-            nombre_guess = int(input(""))
-            if nombre_guess == nombre_random:
-                print("vous avez gagné")
-            elif nombre_guess <= nombre_random:
-                nombre_guess = nombre_minimum + 0
-            elif nombre_guess >= nombre_random:
-                nombre_guess = nombre_maximum + 0
-            elif essai_actuel == essai_Maximum:
-                print(f"vous avec perdu le nombre était {nombre_random}")
-    # case 2:
+        nombre_maximum = 19
+        nombre_random = random.randint(1, 19)
+    case 2:
+         essai_Maximum = 5
+         nombre_maximum = 49
+         nombre_random = random.randint(1, 49)
     
-    # case 3:
-    
-    # case 4:
+    case 3:
+         essai_Maximum = 5
+         nombre_maximum = 99
+         nombre_random = random.randint(1, 99)
+    case 4:
+         essai_Maximum = 1
+         nombre_maximum = 999
+         nombre_random = random.randint(1, 999)
     
     case _:
         print("erreur")
+
+
+
